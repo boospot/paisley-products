@@ -7,15 +7,16 @@ namespace Composer\Autoload;
 class ComposerStaticInitf953438782c78e200b21ad2e083164a7
 {
     public static $classMap = array (
-        'Skeleton\\Activator' => __DIR__ . '/../..' . '/includes/class-activator.php',
-        'Skeleton\\Admin' => __DIR__ . '/../..' . '/admin/class-admin.php',
-        'Skeleton\\Deactivator' => __DIR__ . '/../..' . '/includes/class-deactivator.php',
-        'Skeleton\\Front' => __DIR__ . '/../..' . '/public/class-front.php',
-        'Skeleton\\Globals' => __DIR__ . '/../..' . '/includes/class-globals.php',
-        'Skeleton\\Init' => __DIR__ . '/../..' . '/includes/class-init.php',
-        'Skeleton\\Loader' => __DIR__ . '/../..' . '/includes/class-loader.php',
-        'Skeleton\\Taxonomy' => __DIR__ . '/../..' . '/includes/class-taxonomy.php',
-        'Skeleton\\i18N' => __DIR__ . '/../..' . '/includes/class-i18n.php',
+        'Paisleyproducts\\Activator' => __DIR__ . '/../..' . '/includes/class-activator.php',
+        'Paisleyproducts\\Admin' => __DIR__ . '/../..' . '/admin/class-admin.php',
+        'Paisleyproducts\\Deactivator' => __DIR__ . '/../..' . '/includes/class-deactivator.php',
+        'Paisleyproducts\\Front' => __DIR__ . '/../..' . '/public/class-front.php',
+        'Paisleyproducts\\Globals' => __DIR__ . '/../..' . '/includes/class-globals.php',
+        'Paisleyproducts\\Init' => __DIR__ . '/../..' . '/includes/class-init.php',
+        'Paisleyproducts\\Loader' => __DIR__ . '/../..' . '/includes/class-loader.php',
+        'Paisleyproducts\\Shortcode' => __DIR__ . '/../..' . '/includes/class-shortcode.php',
+        'Paisleyproducts\\Taxonomy' => __DIR__ . '/../..' . '/includes/class-taxonomy.php',
+        'Paisleyproducts\\i18N' => __DIR__ . '/../..' . '/includes/class-i18n.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

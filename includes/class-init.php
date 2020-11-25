@@ -1,6 +1,6 @@
 <?php
 
-namespace Skeleton;
+namespace Paisleyproducts;
 /**
  * The file that defines the core plugin class
  *
@@ -10,8 +10,8 @@ namespace Skeleton;
  * @link       https://booskills.com/rao
  * @since      1.0.0
  *
- * @package    Skeleton
- * @subpackage Skeleton/includes
+ * @package    Paisleyproducts
+ * @subpackage Paisleyproducts/includes
  */
 
 /**
@@ -24,8 +24,8 @@ namespace Skeleton;
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Skeleton
- * @subpackage Skeleton/includes
+ * @package    Paisleyproducts
+ * @subpackage Paisleyproducts/includes
  * @author     Rao <rao@booskills.com>
  */
 class Init {
@@ -70,25 +70,26 @@ class Init {
 	public function __construct() {
 
 
-		if ( defined( 'SKELETON_VERSION' ) ) {
-			$this->version = SKELETON_VERSION;
+		if ( defined( 'PAISLEYPRODUCTS_VERSION' ) ) {
+			$this->version = PAISLEYPRODUCTS_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		if ( defined( 'SKELETON_PLUGIN_NAME' ) ) {
-			$this->plugin_name = SKELETON_PLUGIN_NAME;
+		if ( defined( 'PAISLEYPRODUCTS_PLUGIN_NAME' ) ) {
+			$this->plugin_name = PAISLEYPRODUCTS_PLUGIN_NAME;
 		} else {
-			$this->plugin_name = 'skeleton';
+			$this->plugin_name = 'paisleyproducts';
 		}
 
 
 		$this->load_dependencies();
 		$this->set_locale();
-		$this->define_admin_hooks();
+//		$this->define_admin_hooks();
 		$this->define_public_hooks();
-		$this->define_taxonomy_hooks();
+//		$this->define_taxonomy_hooks();
+		$this->define_shortcode_hooks();
 
-		do_action( 'skeleton_init_construct' );
+		do_action( 'paisleyproducts_init_construct' );
 
 	}
 
@@ -149,8 +150,8 @@ class Init {
 
 		$plugin_admin = new Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+//		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
+//		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 
 	}
@@ -185,14 +186,8 @@ class Init {
 	 */
 	private function define_public_hooks() {
 
-		if ( is_admin() ) {
-			return null;
-		}
+		new Front( $this->get_plugin_name(), $this->get_version() );
 
-		$plugin_public = new Front( $this->get_plugin_name(), $this->get_version() );
-
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 	}
 
@@ -205,6 +200,20 @@ class Init {
 	private function define_taxonomy_hooks() {
 
 //		$plugin_taxonomies = new Taxonomy();
+
+
+	}
+
+
+	/**
+	 * Register all of the hooks related to taxonomies
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function define_shortcode_hooks() {
+
+		new Shortcode();
 
 
 	}

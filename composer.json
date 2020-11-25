@@ -1,6 +1,6 @@
 {
-  "name": "boospot/skeleton",
-  "description": "Skeleton for WordPress Plugin Boilerplate with Namespace",
+  "name": "boospot/paisleyproducts",
+  "description": "Paisleyproducts for WordPress Plugin Boilerplate with Namespace",
   "type": "wordpress-plugin",
   "license": "GPL2",
   "authors": [

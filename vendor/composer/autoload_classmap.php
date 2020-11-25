@@ -6,13 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Skeleton\\Activator' => $baseDir . '/includes/class-activator.php',
-    'Skeleton\\Admin' => $baseDir . '/admin/class-admin.php',
-    'Skeleton\\Deactivator' => $baseDir . '/includes/class-deactivator.php',
-    'Skeleton\\Front' => $baseDir . '/public/class-front.php',
-    'Skeleton\\Globals' => $baseDir . '/includes/class-globals.php',
-    'Skeleton\\Init' => $baseDir . '/includes/class-init.php',
-    'Skeleton\\Loader' => $baseDir . '/includes/class-loader.php',
-    'Skeleton\\Taxonomy' => $baseDir . '/includes/class-taxonomy.php',
-    'Skeleton\\i18N' => $baseDir . '/includes/class-i18n.php',
+    'Paisleyproducts\\Activator' => $baseDir . '/includes/class-activator.php',
+    'Paisleyproducts\\Admin' => $baseDir . '/admin/class-admin.php',
+    'Paisleyproducts\\Deactivator' => $baseDir . '/includes/class-deactivator.php',
+    'Paisleyproducts\\Front' => $baseDir . '/public/class-front.php',
+    'Paisleyproducts\\Globals' => $baseDir . '/includes/class-globals.php',
+    'Paisleyproducts\\Init' => $baseDir . '/includes/class-init.php',
+    'Paisleyproducts\\Loader' => $baseDir . '/includes/class-loader.php',
+    'Paisleyproducts\\Shortcode' => $baseDir . '/includes/class-shortcode.php',
+    'Paisleyproducts\\Taxonomy' => $baseDir . '/includes/class-taxonomy.php',
+    'Paisleyproducts\\i18N' => $baseDir . '/includes/class-i18n.php',
 );
