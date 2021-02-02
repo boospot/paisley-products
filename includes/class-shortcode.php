@@ -81,6 +81,9 @@ class Shortcode {
 	 * display_paisley_products
 	 */
 	public function display_paisley_products( $atts ) {
+		if( ! function_exists('get_field') ){
+			return null;
+		}
 
 		$posts = get_field( 'recipes_related_product' );
 		//short code array
